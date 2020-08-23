@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    < div className="App">
+      <h1>Please work !!</h1>
+      <section id="slide">
+        <figure></figure>
+        <img src="../public/img/adelehaenelmodifs.png" alt="Adele Haenel Cesars 2020"></img>
+        <p id="catchphrase">Lieu de partage de films féministes</p>
+      </section>
+
     </div>
   );
 }
+
 
 export default App;

@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  padding: 20px 15px;
+  background: white;
+  max-height: 175px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Comfortaa', cursive;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header h2 {
+  margin: 50px 0 0 -25px;
+}
+
+header a#logo > img#logo {
+  height: 100%;
+  width: 200px;
+  margin-left: 30px;
+}
+
+/* 
+header>nav {
+    min-width: 500px;
+    margin-left: 30px;
+    display: grid;
+} */
+/* 
+header>nav>a>h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+} */
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,1 @@
+install Sass on React : npm i --save-dev node-sass

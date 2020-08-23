@@ -1,0 +1,138 @@
+nav {
+  right: 0;
+  position: absolute;
+  min-height: 8vh;
+  width: 500px;
+  top: 2vh;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: sans-serif;
+}
+
+.nav-links > h3 {
+  /* list-style: none; */
+  width: 100px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 980px) {
+  h2 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 979px) {
+  #bgvideo {
+    display: none;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 8vh;
+    background: gray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  }
+  .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  body {
+    overflow-x: hidden;
+    background: black;
+  }
+  .burger {
+    display: block;
+    height: 7vh;
+    width: 7vw;
+    position: relative;
+    top: 2vh;
+    left: calc(95% - 7vw);
+  }
+  .burger span {
+    width: 100%;
+    height: 4px;
+    background: white;
+    display: block;
+    position: absolute;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  .burger span::before,
+  .burger span::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background: white;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+  }
+  .burger span::before {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  .burger span::after {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  /* premier span */
+  .burger.active span::before {
+    -webkit-transform: translateY(0px) rotateZ(45deg);
+            transform: translateY(0px) rotateZ(45deg);
+  }
+  /* le 2 nde */
+  .burger.active span {
+    background: transparent;
+  }
+  /* et le dernier */
+  .burger.active span::after {
+    -webkit-transform: translateY(0px) rotateZ(-45deg);
+            transform: translateY(0px) rotateZ(-45deg);
+  }
+  /* plus tard animation */
+}
+/*# sourceMappingURL=menu.css.map */
