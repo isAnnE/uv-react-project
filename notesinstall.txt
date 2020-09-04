@@ -1,1 +1,10 @@
 install Sass on React : npm i --save-dev node-sass
+
+
+
+install nav : 
+
+npm install reac-router-dom
+
+puis on peut utiliser <Link to="/"> </Link> 
+<NavLink exact to="/"> 
