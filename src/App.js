@@ -13,18 +13,22 @@ import haenel from "./components/img/adelehaenelmodifs.png";
 
 // Pages
 import About from "./components/page/About";
-// import Home from "./components/page/Home";
 import Media from "./components/page/Media";
+import Contact from "./components/page/Contact";
+import Mentions from "./components/page/Mentions";
+import NotFound from "./components/page/NotFound";
+import Admin from "./components/page/Admin";
+// import AdminUser from "./components/page/AdminUser";
+
 
 
 // Layout
-import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-
+import Navbar from "./components/layout/nav/Navbar";
 // import { render } from '@testing-library/react';
 
 // COMPONENTS
-import Navbar from "./components/layout/nav/Navbar";
+
 // import { Router } from 'react-router';
 
 // const api = axios.create
@@ -33,7 +37,7 @@ import Navbar from "./components/layout/nav/Navbar";
 function App() {
   return (
     <div className="App">
-      <Header />
+
       <Navbar />
       <main>
         <Router>
@@ -41,6 +45,10 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
             <Route path="/media" component={Media} />
+            <Route path="/admin" component={Admin} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/mentions" component={Mentions} />
+            <Route path="*" component={NotFound} />
           </Switch>
         </Router>
       </main>

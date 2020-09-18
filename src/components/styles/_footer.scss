@@ -4,27 +4,40 @@ footer {
     border-top: 8px solid #93278f;
     justify-content: space-between;
     font-family: 'Nanum Gothic', sans-serif;
+    min-height: 75px;
+
 
     section#footerdata {
-        min-height: 75px;
-        padding-top: 15px;
-        padding-right: 75%;
+        width: 50%;
+        padding: 10px;
+
 
         &p:last-child {
             padding-top: 8px
+        }
+
+        a {
+            font-size: 14px;
+            min-width: 150px;
+            display: inline-block;
+            padding: 5px 15px;
         }
     }
 
 
 
     div#logos {
-        flex-direction: row;
-        flex-wrap: wrap;
+        width: 50%;
+        display: flex;
+        justify-content: right;
+        padding-right: 30px;
+
+
 
         a>img.logo {
             width: 30px;
             height: 30px;
-            margin: 15px 5px;
+            margin: 15px 7px;
         }
     }
 }
