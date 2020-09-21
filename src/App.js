@@ -14,12 +14,14 @@ import haenel from "./components/img/adelehaenelmodifs.png";
 // Pages
 import About from "./components/page/About";
 import Media from "./components/page/Media";
+// import Films from "./components/page/Films";
+// import Series from "./components/page/Series";
+// import Documentaires from "./components/page/Documentaires";
 import Contact from "./components/page/Contact";
 import Mentions from "./components/page/Mentions";
 import NotFound from "./components/page/NotFound";
 import Admin from "./components/page/Admin";
-// import AdminUser from "./components/page/AdminUser";
-
+import Login from "./components/page/Login";
 
 
 // Layout
@@ -44,11 +46,30 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/media" component={Media} />
+            <Route
+              path='/films'
+              render={(props) => (
+                <Media {...props} mediaType="Film" />
+              )}
+            />
+            <Route
+              path='/series'
+              render={(props) => (
+                <Media {...props} mediaType="Serie" />
+              )}
+            />
+            <Route
+              path='/documentaires'
+              render={(props) => (
+                <Media {...props} mediaType="Documentaire" />
+              )}
+            />
             <Route path="/admin" component={Admin} />
+            <Route path="/login" component={Login} />
             <Route path="/contact" component={Contact} />
             <Route path="/mentions" component={Mentions} />
             <Route path="*" component={NotFound} />
+
           </Switch>
         </Router>
       </main>
