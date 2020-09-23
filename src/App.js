@@ -20,7 +20,8 @@ import Media from "./components/page/Media";
 import Contact from "./components/page/Contact";
 import Mentions from "./components/page/Mentions";
 import NotFound from "./components/page/NotFound";
-import Admin from "./components/page/Admin";
+import Admin from "./components/admin/Admin";
+import EditAdmin from "./components/admin/EditAdmin";
 import Login from "./components/page/Login";
 
 
@@ -65,6 +66,7 @@ function App() {
               )}
             />
             <Route path="/admin" component={Admin} />
+            <Route path="/editadmin/:id" component={EditAdmin} />
             <Route path="/login" component={Login} />
             <Route path="/contact" component={Contact} />
             <Route path="/mentions" component={Mentions} />
