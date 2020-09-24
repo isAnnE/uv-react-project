@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import BrowserRouter as Router, { Link, NavLink, Switch, Route } from 'react-router-dom';
 import haenel from "./components/img/adelehaenelmodifs.png";
 
+// Auth
+import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 
 // Pages
 import About from "./components/page/About";
@@ -65,8 +67,8 @@ function App() {
                 <Media {...props} mediaType="Documentaire" />
               )}
             />
-            <Route path="/admin" component={Admin} />
-            <Route path="/editadmin/:id" component={EditAdmin} />
+            <ProtectedRoute path="/admin" component={Admin} />
+            <ProtectedRoute path="/editadmin/:id" component={EditAdmin} />
             <Route path="/login" component={Login} />
             <Route path="/contact" component={Contact} />
             <Route path="/mentions" component={Mentions} />
