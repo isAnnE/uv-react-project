@@ -1,0 +1,39 @@
+@import "./variables";
+
+.sideDrawer {
+    height: 100vh;
+    //if i want to put a height of 100% i must also give the gnrl app 100%
+    background: $colourPurple;
+    box-shadow: 2px 0px 5px $colourDarkGrey;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    z-index: 200;
+    padding: 50px;
+}
+
+.sideDrawer ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+
+}
+
+.sideDrawer li {
+    padding-top: 35px;
+}
+
+.sideDrawer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.sideDrawer a:hover,
+.sideDrawer a:active {
+    color: $colourDarkBlue;
+}

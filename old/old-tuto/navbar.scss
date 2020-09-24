@@ -1,0 +1,106 @@
+@import "./variables";
+
+.navbar {
+    position: fixed;
+    display: flex;
+    // display: grid;
+    // grid-template-columns: 40% 30% 30%;
+    // top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 4px dotted $colourYellow;
+    height: 130px;
+    align-items: center;
+    padding-top: 25px;
+    z-index: 100
+}
+
+
+.navbar_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-width: 40%;
+    padding: 15px
+}
+
+// .navbar_left a {
+
+// }
+
+.navbar_left img {
+    width: 100;
+    max-height: 120px;
+}
+
+wh .navbar_left h1 {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 15px
+}
+
+
+.navbar_nav_items a {
+    color: white;
+    text-decoration: none;
+
+}
+
+
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 30%;
+    // padding:
+}
+
+.loginlogo {
+    padding-right: 50px;
+    color: $colourPurple;
+    height: 75px;
+    width: 75px;
+}
+
+.burger {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+}
+
+.searchbar {
+    min-width: 30%
+}
+
+nav>a>h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+// .navbar_nav_items ul {
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//     display: flex;
+
+// }
+
+// .navbar_nav_items li {
+//     padding: 0 0.5rem;
+// }
+
+// .navbar_nav_items {
+//     display: flex;
+//     justify-content: flex-end;
+//     width: 75%;
+// }
+
+// .navbar_nav_items a:hover,
+// .navbar_nav_items a:active {
+//     color: darkblue
+// }

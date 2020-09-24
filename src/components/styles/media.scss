@@ -1,0 +1,30 @@
+@import "./reset";
+@import "./variables";
+
+.media-displayer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 150px 10px;
+    height: 100%;
+
+    .mediatile {
+        padding: 20px;
+        width: 280px;
+        height: 280px;
+        border: 5px solid black;
+        margin: 15px 0 15px 30px;
+    }
+
+    h1 {
+        padding: 25px 0;
+        color: $colourDarkBlue;
+    }
+
+    .listfilms a {
+        line-height: 20px;
+        color: black;
+        font-size: 15px
+    }
+}

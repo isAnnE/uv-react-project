@@ -1,0 +1,27 @@
+@import "./reset";
+@import "./variables";
+
+
+
+.notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    height: 92vh;
+
+    h1 {
+        padding: 25px;
+    }
+
+    p {
+        padding: 10px;
+    }
+
+    .pic {
+        height: 280px;
+    }
+
+}
+
+;

@@ -1,0 +1,33 @@
+@import "./reset";
+@import "./variables";
+
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    height: 95vh;
+
+    h1 {
+        padding: 25px 0;
+        color: $colourDarkBlue;
+    }
+
+    .email {
+        text-decoration: none;
+        color: $colourPurple;
+        font-size: bold;
+    }
+
+    p {
+        padding: 10px 20px;
+    }
+
+    .gaga {
+        padding: 30px 0;
+        max-width: 280px;
+    }
+
+}

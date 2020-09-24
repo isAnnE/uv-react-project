@@ -1,0 +1,25 @@
+@import "../styles/reset";
+@import "../styles/variables";
+
+
+.table {
+    max-width: 100%;
+    font-size: .9rem;
+}
+
+.table,
+.table .cell {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.table .cell {
+    padding: 7px;
+    text-align: center;
+}
+
+.table .cell.id {
+    max-width: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

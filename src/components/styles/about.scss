@@ -1,0 +1,25 @@
+@import "./reset";
+@import "./variables";
+
+// rajout media query
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    height: 90vh;
+
+    h1 {
+        padding: 25px;
+        color: $colourDarkBlue;
+        width: 50%;
+        text-align: center;
+    }
+
+    p {
+        padding: 10px;
+        width: 50%;
+    }
+
+}
