@@ -1,15 +1,14 @@
-import React from 'react';
-import '../styles/login.scss';
+// import React from 'react';
+// import '../styles/login.scss';
+// // import SignIn from "../utils/SignIn";
+// // import SignUp from "../utils/SignUp";
 
 
-export default function Login() {
-    return (
-        <div className="login">
-            <h1>Sign In</h1>
+// export default function Login() {
+//     return (
+//         <div className="login">
 
 
-            <h1>Sign Up</h1>
-
-        </div>
-    );
-}
+//         </div>
+//     );
+// }

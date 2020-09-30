@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import AuthContext from "./../components/auth/AuthContext";
-import UserInfos from "./../components/UserInfos";
+import UserInfos from "../utils/Userinfos";
 
 export default function Dashboard() {
     // dans un component fonctionnel, on accède au contexte via le "hook" useContext

@@ -14,7 +14,7 @@ export default class AdminUsers extends Component {
     };
 
     async componentDidMount() {
-        const apiRes = await handler.getAll();
+        const apiRes = await handler.get();
         this.setState({
             users: apiRes.data
         });
@@ -26,7 +26,7 @@ export default class AdminUsers extends Component {
 
     handleDelete = async (id) => {
         await handler.deleteOne(id);
-        const apiRes2 = await handler.getAll();
+        const apiRes2 = await handler.get();
         this.setState({
             products: apiRes2.data
         });
@@ -56,7 +56,7 @@ export default class AdminUsers extends Component {
                         <td className="cell id" >
                             {user._id}
                         </td>
-                        <td className="cell" > {user.first_name} </td>
+                        <td className="cell" > {users.first_name} </td>
                         <td className="cell"> {user.username_name} </td>
                         <td className="cell"> {user.last_name} </td>
                         <td className="cell" > {user.email} </td>

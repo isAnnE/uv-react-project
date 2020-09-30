@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import AuthContext from "../../auth/AuthContext";
+import ButtonSignOut from "../nav/ButtonSignOut"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faUserSlash } from "@fortawesome/free-solid-svg-icons";
 // import { Link, NavLink } from 'react-router-dom';
 // import logologin from "./components/img/login_signin.svg";
 
@@ -35,7 +39,12 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open }) => {
+// const RightNav = ({ open }) => 
+
+export default function RightNav({ open }) {
+
+  const AuthContextValue = useContext(AuthContext);
+
   return (
     <Ul open={open}>
       <li><a href="/">Home</a></li>
@@ -43,10 +52,12 @@ const RightNav = ({ open }) => {
       <li><a href="/films">Films</a></li>
       <li><a href="/series">Series</a></li>
       <li><a href="/documentaires">Documentaires</a></li>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/logout">Logout</a></li>
+      <li><a href="/signin">Sign In</a></li>
+      <li> {AuthContextValue.isSignedIn && (
+        <ButtonSignOut />
+      )}</li>
     </Ul>
-  )
+  );
 }
 
-export default RightNav
+// export default RightNav}

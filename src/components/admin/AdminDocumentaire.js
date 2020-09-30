@@ -12,7 +12,7 @@ export default class AdminMedia extends Component {
     };
 
     async componentDidMount() {
-        const apiRes1 = await handler.getAll("Documentaire");
+        const apiRes1 = await handler.get("Documentaire");
 
         this.setState({ medias: apiRes1.data });
 
@@ -24,7 +24,7 @@ export default class AdminMedia extends Component {
 
         await handler.deleteOne(id, "Documentaires");
 
-        const allMedia = await handler.getAll("Documentaire");
+        const allMedia = await handler.get("Documentaire");
 
         this.setState({ medias: allMedia.data });
         console.log("hey gurl !!! you can delete series")

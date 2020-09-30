@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AuthContext from "../../auth/AuthContext";
-import "./../styles/mod.form.css";
+import AuthContext from "../auth/AuthContext";
+import ".././styles/signin.scss";
 
 export default class Signin extends Component {
     state = {

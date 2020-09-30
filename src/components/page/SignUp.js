@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import AuthContext from "./../components/auth/AuthContext";
+import AuthContext from "../auth/AuthContext";
 import { Link } from "react-router-dom";
-import "./../styles/mod.form.css";
+// import "./../styles/mod.form.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 

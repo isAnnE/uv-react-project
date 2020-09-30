@@ -1,8 +1,12 @@
-import React, { Component } from "react";
-import { apiHandler } from ".././api/handler";
+import React, {
+    Component
+} from "react";
+import {
+    APIHandler
+} from "../api/handler";
 import AuthContext from "./AuthContext";
 
-const handler = apiHandler();
+const handler = new APIHandler("api/auth");
 const tokenName = "authToken";
 
 // ATTENTION, ce fichier dépend de ./AuthContext, défini dans ce même dossier
@@ -28,11 +32,19 @@ export default class AuthProvider extends Component {
     getUserByToken = () => {
         handler
             .get("/api/auth/get-user-by-token")
-            .then(({ data }) => {
-                this.setState({ currentUser: data, isSignedIn: true });
+            .then(({
+                data
+            }) => {
+                this.setState({
+                    currentUser: data,
+                    isSignedIn: true
+                });
             })
             .catch((apiErr) => {
-                this.setState({ currentUser: null, isSignedIn: false });
+                this.setState({
+                    currentUser: null,
+                    isSignedIn: false
+                });
                 console.error(apiErr.message);
             });
     };
@@ -58,7 +70,9 @@ export default class AuthProvider extends Component {
      */
     setCurrentUser = (infos, clbk) => {
         // on met à jour le state du AuthProvider avec les infos user mises à jour, mais :
-        this.setState({ currentUser: infos }, () => {
+        this.setState({
+            currentUser: infos
+        }, () => {
             // setState est ASYNC !!!
             if (clbk) clbk(); // on utilise le callback du SetState AVANT d'exécuter le callback fourni par le component Signin, Signout ou autre !
         });
@@ -70,7 +84,10 @@ export default class AuthProvider extends Component {
      * @return {undefined}
      */
     signin = async (infos, clbk) => {
-        const { email, password } = infos;
+        const {
+            email,
+            password
+        } = infos;
         try {
             const apiRes = await handler.post("/api/auth/signin", {
                 email,
@@ -90,12 +107,12 @@ export default class AuthProvider extends Component {
      */
     signup = async (infos, clbk) => {
         try {
-            await handler.post("/api/auth/signup", infos);
+            await handler.instance.post("/signup", infos);
             clbk(); // so ok : appel du callback défini @ Signup
         } catch (err) {
-            const method = err.response.status.toString().startsWith("4")
-                ? "warn"
-                : "error"; // facultatif : outup un console.error OU console.warn en fonction du status retourné par le backend
+            const method = err.response.status.toString().startsWith("4") ?
+                "warn" :
+                "error"; // facultatif : outup un console.error OU console.warn en fonction du status retourné par le backend
             console[method](err.response.data);
         }
     };
@@ -131,10 +148,12 @@ export default class AuthProvider extends Component {
             isSignedIn: this.isSignedIn()
         };
 
-        return (
-            <AuthContext.Provider value={authValues}>
-                {this.props.children}
-            </AuthContext.Provider>
+        return (< AuthContext.Provider
+            value={authValues}>
+            {
+                this.props.children
+            }
+        </AuthContext.Provider>
         );
     }
 }
