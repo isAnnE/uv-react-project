@@ -45,12 +45,16 @@ export default class Signup extends Component {
 
     render() {
         return (
+
+
             <form
                 onChange={this.handleInput}
                 onSubmit={this.handleSubmit}
                 className="form"
             >
-                <h1 className="title">Signup</h1>
+                <h1 className="title">Inscription</h1>
+                <p>Vous avez des idées de films, séries ou documentaires qui ont leur place sur le site ?
+                    Inscrivez-vous pour pouvoir nous les proposer.</p>
                 <label htmlFor="first_name" className="label">
                     first name
         </label>

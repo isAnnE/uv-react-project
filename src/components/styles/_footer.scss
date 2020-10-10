@@ -1,9 +1,12 @@
+@import "./reset";
+@import "./variables";
+
 footer {
     background: white;
     display: flex;
     border-top: 8px solid #93278f;
     justify-content: space-between;
-    font-family: 'Nanum Gothic', sans-serif;
+    // font-family: 'Confortaa';
     min-height: 75px;
 
 
@@ -21,6 +24,13 @@ footer {
             min-width: 150px;
             display: inline-block;
             padding: 5px 15px;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: $colourPurple;
+            font-size: bold
         }
     }
 

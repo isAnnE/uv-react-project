@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Burger from './Burger';
-import Logo from './logoUVviolet.png';
+import Logo from './logoUVviolet.jpg';
 
 const Nav = styled.nav`
   width: 100%;
@@ -14,17 +14,17 @@ const Nav = styled.nav`
   background: white;
 
   .logo {
-    width: 120px;
-    padding: 15px 0;
+    height: 90px;
+    padding-top: 10px;
   }
+
+
 `
 
 const Navbar = () => {
   return (
     <Nav>
-      <div className="logo">
-        <img src={Logo} alt="logo" className="logo" />
-      </div>
+      <a href="/"><img src={Logo} alt="logo" className="logo" /></a>
       <Burger />
     </Nav>
   )

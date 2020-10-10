@@ -16,6 +16,7 @@ export default class Signin extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault(); //  no page refresh
+        console.log("hello")
         this.context.signin(this.state, () => {
             this.props.history.push("/dashboard");
         });
@@ -28,9 +29,10 @@ export default class Signin extends Component {
                 onSubmit={this.handleSubmit}
                 className="form"
             >
-                <h1 className="title">Signin</h1>
+                <h1 className="title">Connection</h1>
+
                 <label htmlFor="email" className="label">
-                    email
+                    Email
         </label>
                 <input
                     id="email"
@@ -54,9 +56,9 @@ export default class Signin extends Component {
                 <button className="btn">ok</button>
                 <hr />
                 <p>
-                    No account yet ? please{" "}
+                    Si vous n'avez pas encore de compte, c'est par{" "}
                     <Link className="link" to="/signup">
-                        sign up
+                        ici !
           </Link>
           .
         </p>

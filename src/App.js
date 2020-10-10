@@ -27,6 +27,8 @@ import EditAdmin from "./components/admin/EditAdmin";
 // import Login from "./components/page/Login";
 import SignIn from "./components/page/SignIn";
 import SignUp from "./components/page/SignUp";
+import Submit from "./components/page/Submit";
+import Dashboard from "./components/page/Dashboard";
 
 
 
@@ -70,14 +72,18 @@ function App() {
                 <Media {...props} mediaType="Documentaire" />
               )}
             />
-            <Route path="/admin" component={Admin} />
-            <Route path="/editadmin/:id" component={EditAdmin} />
-            <Route path="/signin" component={SignIn} />
-            <Route path="/signup" component={SignUp} />
+
+
             <Route path="/contact" component={Contact} />
             <Route path="/mentions" component={Mentions} />
+            <Route path="/signin" component={SignIn} />
+            <Route path="/signup" component={SignUp} />
+            <ProtectedRoute path="/submit" component={Submit} />
+            <ProtectedRoute path="/dashboard" component={Dashboard} />
+            <ProtectedRoute path="/admin" component={Admin} />
+            <ProtectedRoute path="/editadmin/:id" component={EditAdmin} />
             <Route path="*" component={NotFound} />
-
+            {/* not found doit être la dernière route */}
 
           </Switch>
         </Router>
@@ -114,9 +120,9 @@ const Home = () => (
 
     <section id="apercus">
       <div id="apercus">
-        <figure class="apercu">Insert title</figure>
-        <figure class="apercu">Insert title</figure>
-        <figure class="apercu">Insert title</figure>
+        <figure className="apercu">Insert title</figure>
+        <figure className="apercu">Insert title</figure>
+        <figure className="apercu">Insert title</figure>
       </div>
     </section>
 

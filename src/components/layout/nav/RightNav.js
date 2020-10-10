@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import AuthContext from "../../auth/AuthContext";
-import ButtonSignOut from "../nav/ButtonSignOut"
+import ButtonSignout from "../../utils/ButtonSignout";
+import ButtonDashboard from "../../utils/ButtonDashboard";
+
+
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faUserSlash } from "@fortawesome/free-solid-svg-icons";
 // import { Link, NavLink } from 'react-router-dom';
@@ -11,12 +14,24 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
- 
+  align-items: center;
+  justify-content: center;
 
   li {
     padding: 18px 30px;
   }
 
+  .button {
+    text-decoration: none;
+    color: black
+}
+
+  a:hover {
+  color: #93278f;
+  font-size: bold
+}
+
+.dashboardbuttons {padding-right: 30px}
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
@@ -47,15 +62,22 @@ export default function RightNav({ open }) {
 
   return (
     <Ul open={open}>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/films">Films</a></li>
-      <li><a href="/series">Series</a></li>
-      <li><a href="/documentaires">Documentaires</a></li>
-      <li><a href="/signin">Sign In</a></li>
-      <li> {AuthContextValue.isSignedIn && (
-        <ButtonSignOut />
-      )}</li>
+      <li><a className="button" href="/">Accueil</a></li>
+      <li><a className="button" href="/about">A propos</a></li>
+      <li><a className="button" href="/films">Films</a></li>
+      <li><a className="button" href="/series">Séries</a></li>
+      <li><a className="button" href="/documentaires">Documentaires</a></li>
+      <div className="dashboardbuttons">
+        {'\u00A0'}
+        <ButtonDashboard />
+        {AuthContextValue.isSignedIn && (
+          <>
+            {'\u00A0'} | <ButtonSignout />
+          </>
+        )}
+      </div>
+
+
     </Ul>
   );
 }

@@ -6,7 +6,7 @@ export default function NotFound() {
     return (
         < div className="notfound" >
             <h1 className="title" > Not found !</h1>
-            <p> La page que vos cherchez est introuvable. </p>
+            <p> La page que vous cherchez est introuvable. </p>
             <img src={techdiff} alt="404" className="pic" />
         </div>
     )

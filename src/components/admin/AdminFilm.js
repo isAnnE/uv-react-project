@@ -11,7 +11,7 @@ export default class AdminMedia extends Component {
     };
 
     async componentDidMount() {
-        const apiRes1 = await handler.get("Film");
+        const apiRes1 = await handler.getAll("Film");
 
         this.setState({ medias: apiRes1.data });
 

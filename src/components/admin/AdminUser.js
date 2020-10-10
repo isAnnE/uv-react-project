@@ -14,7 +14,7 @@ export default class AdminUsers extends Component {
     };
 
     async componentDidMount() {
-        const apiRes = await handler.get();
+        const apiRes = await handler.getAll();
         this.setState({
             users: apiRes.data
         });

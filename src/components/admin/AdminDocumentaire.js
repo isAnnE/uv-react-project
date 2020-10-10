@@ -12,7 +12,7 @@ export default class AdminMedia extends Component {
     };
 
     async componentDidMount() {
-        const apiRes1 = await handler.get("Documentaire");
+        const apiRes1 = await handler.getAll("Documentaire");
 
         this.setState({ medias: apiRes1.data });
 

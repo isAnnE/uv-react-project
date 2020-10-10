@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import AuthContext from "./../components/auth/AuthContext";
+import AuthContext from "../auth/AuthContext";
 import UserInfos from "../utils/Userinfos";
 
 export default function Dashboard() {
