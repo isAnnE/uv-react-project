@@ -13,13 +13,27 @@
         padding: 20px;
         width: 280px;
         height: 280px;
-        border: 5px solid black;
+        border: 5px solid $colourDarkBlue;
         margin: 15px 0 15px 30px;
+        background: $colourDarkBlue;
+    }
+
+    .infolist {
+        list-style: none;
+        color: white;
+    }
+
+    h3 {
+        color: white
+    }
+
+    .img {
+        color: white
     }
 
     h1 {
         padding: 25px 0;
-        color: $colourDarkBlue;
+        color: $colourPurple;
     }
 
     .listfilms a {
