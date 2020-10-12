@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { APIHandler } from ".././api/handler";
-import "../styles/basicstyle.scss";
+import "../styles/userinfos.scss";
 
 const handler = new APIHandler("api/user");
 
@@ -36,9 +36,6 @@ export default class UserInfos extends Component {
     render() {
         return (
             <div className="userboard">
-                <h1>Bienvenue sur votre profil !</h1>
-
-                <p>Vous pouvez y modifier vos coordonnées personnelles et soumettre une idée de film, série ou documentaire qui vous paraît avoir sa place sur le site</p>
 
                 <form onChange={
                     this.handleChange
@@ -68,7 +65,7 @@ export default class UserInfos extends Component {
                         defaultValue={this.props.context.currentUser.email} />
                     <button className="btn" > update infos </button>
                 </form>
-
+                <button className="filmform"><a href="/submit">Suggérer un film</a></button>
             </div>
         );
     }

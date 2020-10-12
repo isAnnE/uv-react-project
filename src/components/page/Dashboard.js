@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import AuthContext from "../auth/AuthContext";
 import UserInfos from "../utils/Userinfos";
+import "../styles/dashboard.scss";
 
 export default function Dashboard() {
     // dans un component fonctionnel, on accède au contexte via le "hook" useContext
@@ -10,13 +11,15 @@ export default function Dashboard() {
 
     return (
         Boolean(AuthContextValue.currentUser) && (
-            <div>
-                <h1 className="title">Dashboard</h1>
-                <p>Welcome {AuthContextValue.currentUser.first_name} !</p>
+            <div className="dash">
+                <h1 className="title">Mon profil</h1>
+                <h2>Bienvenue {AuthContextValue.currentUser.first_name} !</h2>
                 <hr />
+                <p>Ici pouvez modifier vos coordonnées personnelles et soumettre une idée de film, série ou documentaire qui vous paraît avoir sa place sur le site</p>
+
                 <UserInfos context={AuthContextValue} />
                 {Boolean(AuthContextValue.currentUser.role === "admin") && (
-                    <div>ADMIN LINKS HERE</div>
+                    <div><button><a>Vers base admin</a></button></div>
                 )}
             </div>
         )
