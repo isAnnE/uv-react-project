@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import { APIHandler } from "../api/handler";
 import "./adminmedia.scss";
 
@@ -24,7 +25,7 @@ export default class AdminMedia extends Component {
 
         await handler.deleteOne(id, "Films");
 
-        const allMedia = await handler.get("Film");
+        const allMedia = await handler.getById("Film");
 
         this.setState({ medias: allMedia.data });
         console.log("hey gurl !!! you can delete all media")
@@ -52,6 +53,7 @@ export default class AdminMedia extends Component {
                             <th className="cell">Produced by</th>
                             <th className="cell">Actors</th>
                             <th className="cell">Type</th>
+                            <th className="cell">Edit</th>
                             <th className="cell">Delete</th>
                         </tr>
                     </thead>
@@ -70,6 +72,9 @@ export default class AdminMedia extends Component {
                                 <td className="cell">{media.produced_by}</td>
                                 <td className="cell">{media.acting}</td>
                                 <td className="cell">{media.media_type}</td>
+                                <td className="cell">
+                                    <Link to={"/editadmin/" + media._id}><button> Edit media </button></Link>
+                                </td>
                                 <td className="cell">
                                     <button
                                         onClick={() => this.handleDelete(media._id)}>

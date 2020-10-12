@@ -33,7 +33,8 @@ export default class AdminMedia extends Component {
         // console.log("c'est bon t'as tout")
 
         return (
-            <div>
+            <div className="ajmedia">
+
 
                 <form onChange={this.handleChange} className="addmedia">
                     <label>Name:<input type="text" name="name" /></label>

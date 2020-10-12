@@ -24,7 +24,7 @@ export default class AdminMedia extends Component {
 
         await handler.deleteOne(id, "Documentaires");
 
-        const allMedia = await handler.get("Documentaire");
+        const allMedia = await handler.getById("Documentaire");
 
         this.setState({ medias: allMedia.data });
         console.log("hey gurl !!! you can delete series")
@@ -66,7 +66,7 @@ export default class AdminMedia extends Component {
         console.log("c'est bon t'as tout")
 
         return (
-            <div>
+            <div className="docus">
                 <h1 className="title">Gérer les docus</h1>
                 <table className="table">
                     <thead>

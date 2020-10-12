@@ -19,8 +19,7 @@ export default function Admin() {
         }
             className="videostore"
             alt="video store" />
-
-
+        <h1 className="title">Ajouter un média</h1>
         <AdminMedia />
         <AdminFilm />
         <AdminSerie />

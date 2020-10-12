@@ -26,7 +26,7 @@ export default class AdminUsers extends Component {
 
     handleDelete = async (id) => {
         await handler.deleteOne(id);
-        const apiRes2 = await handler.get();
+        const apiRes2 = await handler.getById();
         this.setState({
             products: apiRes2.data
         });
@@ -47,7 +47,7 @@ export default class AdminUsers extends Component {
                         <th className="cell" > Username </th>
                         <th className="cell" > Lastname </th>
                         <th className="cell" > Email </th>
-                        <th className="cell" > Admin </th>
+                        {/* <th className="cell" > Admin </th> */}
                         <th className="cell" > delete </th>
                     </tr >
                 </thead>
@@ -60,7 +60,7 @@ export default class AdminUsers extends Component {
                         <td className="cell"> {user.username_name} </td>
                         <td className="cell"> {user.last_name} </td>
                         <td className="cell" > {user.email} </td>
-                        <td className="cell" > {user.is_admin} </td>
+                        {/* <td className="cell" > {user.is_admin} </td> */}
                         <td className="cell" >
                             <button onClick={() => this.handleDelete(user._id)}> x </button>
                         </td >

@@ -1,8 +1,18 @@
 @import "../styles/reset";
 @import "../styles/variables";
 
+.admin {
+    overflow-x: scroll
+}
 
-.table {
+.ajmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+}
+
+.addmedia {
     max-width: 100%;
     font-size: .9rem;
 }
