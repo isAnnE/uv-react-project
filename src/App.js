@@ -10,6 +10,9 @@ import './components/styles/home.scss'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import BrowserRouter as Router, { Link, NavLink, Switch, Route } from 'react-router-dom';
 import haenel from "./components/img/haenel.png";
+import lawrence from "./components/img/lawrenceanyways.jpg";
+import gilmore from "./components/img/ggirls.jpg";
+import docuov from "./components/img/docuovidie.jpg";
 
 // Auth
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
@@ -117,9 +120,28 @@ const Home = () => (
 
     <section className="apercus">
       <div className="apercusdiv">
-        <figure className="apercu">Insert title</figure>
-        <figure className="apercu">Insert title</figure>
-        <figure className="apercu">Insert title</figure>
+
+        <a href="/films">
+          <figure className="apercu">
+            <img src={lawrence} alt="Lawrence Anyways" className="apercuimg" />
+            <figcaption className="caption">Films</figcaption>
+          </figure>
+        </a>
+
+        <a href="/series">
+          <figure className="apercu">
+            <img src={gilmore} alt="Gilmore Girls" className="apercuimg" />
+            <figcaption className="caption">Séries</figcaption>
+          </figure>
+        </a>
+
+        <a href="/series">
+          <figure className="apercu">
+            <img src={docuov} alt="Tu enfanteras dans la douleur" className="apercuimg" />
+            <figcaption className="caption">Documentaires</figcaption>
+          </figure>
+        </a>
+
       </div>
     </section>
 
@@ -129,118 +151,3 @@ const Home = () => (
 
 export default App;
 
-
-
-//TUTO MAX
-
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import SideDrawer from "./components/utils/sideDrawer";
-// import Backdrop from "./components/utils/backdrop";
-// import Navbar from "./components/utils/navbar";
-
-// class App extends Component {
-
-//   state = {
-//     sideDrawerOpen: false
-//   };
-
-//   drawerToggleClickHandler = () => {
-//     this.setState((prevState) => {
-//       return {
-//         sideDrawerOpen: !prevState.sideDrawerOpen
-//       };
-//     });
-//   };
-
-//   backdropClickHandler = () => {
-//     this.setState({
-//       sideDrawerOpen: false
-//     });
-
-//   }
-
-//   render() {
-//     let sideDrawer;
-//     let backdrop;
-
-//     if (this.state.sideDrawerOpen) {
-//       sideDrawer = < SideDrawer />;
-//       backdrop = < Backdrop click={
-//         this.backdropClickHandler
-//       }
-//       />
-//     }
-
-
-
-//     return (
-//       <div>
-//         <Header />
-//         <Navbar drawerClickHandler={
-//           this.drawerToggleClickHandler
-//         }
-//         />
-//         {sideDrawer}
-//         {backdrop}
-//         {/* <Router>
-//           <div className="router">
-//             <Switch>
-//               <Route path="/" exact component={Home} />
-//               <Route path="/about" component={About} />
-//               <Route path="/shop" component={Media} />
-//             </Switch>
-//           </div>
-//         </Router> */}
-
-//         {/* <div className="router">
-//           <NavLink exact to="/">
-//             <Link to="/"> Home </Link>
-//             <Link to="/about"> About </Link> 
-
-//         </div> */}
-
-//         < main id="content-main" >
-//           <p > this is my page content yo </p>
-//           <Home />
-//         </main>
-//         <Footer />
-//       </div >
-//     );
-//   }
-// }
-// function App() {
-//   return (
-//     <div>
-//       <Header />
-//       <Navbar
-// drawerClickHandler={
-//   this.drawerToggleClickHandler
-// }
-// />
-/* {sideDrawer}
-      {backdrop} */
-/* <Router>
-        <div className="router">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/media" component={Media} />
-          </Switch>
-        </div>
-      </Router> */
-
-/* <div className="router">
-              <NavLink exact to="/">
-                <Link to="/"> Home </Link>
-                <Link to="/about"> About </Link>
-
-            </div> */
-
-//       < main id="content-main" >
-//         <p > this is my page content yo </p>
-//         <Home />
-//       </main>
-//       <Footer />
-//     </div >
-//   );
-// }

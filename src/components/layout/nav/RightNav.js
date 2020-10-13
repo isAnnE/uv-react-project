@@ -14,8 +14,7 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
+ align-items: center;
 
   li {
     padding: 18px 30px;
@@ -49,8 +48,12 @@ const Ul = styled.ul`
     //   padding-left: 30px
     // }
 
-    a{color: #fff;
+    a{color: #ffffff;
     text-decoration: none}
+    .button {
+      
+      color: white
+  }
   }
 `;
 
