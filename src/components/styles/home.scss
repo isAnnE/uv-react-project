@@ -1,5 +1,142 @@
-// @import "./reset";
-// @import "./variables";
+@import "./reset";
+@import "./variables";
+
+
+
+// HOME PAGE
+section#slide {
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+
+    img.haenel {
+        display: flex;
+        justify-content: center;
+        float: center;
+        height: auto;
+        max-width: 100%;
+        // z-index: 0
+    }
+
+    @media screen and (min-width:769px) {
+
+        img.haenel {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+
+        img.haenel {
+            display: none;
+            padding-top: 250px;
+        }
+    }
+}
+
+
+
+// FIN DU SLIDE
+
+
+// 2 - INTRO
+
+.intro {
+    min-height: 400px;
+    background: $colourPurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .introdiv {
+        max-width: 90%;
+        max-height: 90%;
+        // min-height: 250px;
+        background: white;
+        padding: 35px 35px;
+
+        p {
+            padding-top: 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .intro {
+        padding-top: 100px;
+    }
+}
+
+
+
+// FIN INTRO
+
+
+
+// 3 - APERCUS 
+
+
+.apercus {
+    min-height: 450px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 100px 0;
+
+
+
+    .apercusdiv {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* grid-template-columns: 33% 33% 33%; */
+    /* grid-template-rows: 33% 33% 33%; */
+    figure {
+        background: lightblue;
+        height: 200px;
+        width: 200px;
+        margin: 10px
+            /* width: 150px;
+          height: 150px */
+
+    }
+
+
+    @media screen and (max-width:768px) {
+        .apercusdiv {
+            @include flexCenter(column);
+            width: 90%;
+            height: 90%;
+            // display: flex;
+            // justify-content: center;
+            // flex-direction: column;
+
+        }
+
+
+        figure {
+            background: red;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+
+}
 
 // // 1 - SLIDE
 

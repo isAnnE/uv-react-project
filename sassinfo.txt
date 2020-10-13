@@ -1,0 +1,31 @@
+
+// @mixin flexCenter ($direction) {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: $direction;
+
+// }
+
+// When using the mixin you need to put @include flexCenter() in the accolades
+
+// @include flexCenter(column, red); --> flex direction will be column + background will be red
+
+// SASS funtionnalities
+
+// 1/ partials (bits of code in =/= files
+// 2/ nesting
+// 3/ 
+
+
+// EXTEND !! 
+// Example with body {}
+// if i want to style newThing with the styling given to body--> newThing { @extend body;}
+// if i just want to change the background color for instance, i'll add "background: lovelyblue;"
+// but the command has to be below the "extend" to override it
+
+
+// OPERATORS
+//you can use +-*/ eg. width: 100% - 20%
+
+

@@ -8,3 +8,11 @@ $colourDarkBlue: #003366;
 
 // TEXT
 $basicText : rgb(39, 38, 38);
+
+@mixin flexCenter ($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+
+}

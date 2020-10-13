@@ -4,9 +4,7 @@
 
 
 .mentions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexCenter(column);
     padding-top: 120px;
     // height: 250vh;
 

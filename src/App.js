@@ -3,12 +3,13 @@
 // } from 'react';
 import React from 'react';
 import './App.scss';
+import './components/styles/home.scss'
 // import axios from 'axios';
 
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import BrowserRouter as Router, { Link, NavLink, Switch, Route } from 'react-router-dom';
-import haenel from "./components/img/adelehaenelmodifs.png";
+import haenel from "./components/img/haenel.png";
 
 // Auth
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
@@ -100,16 +101,12 @@ function App() {
 const Home = () => (
   <>
     <section id="slide" >
-      <figure>
-        <img src={haenel} alt="Adèle Haenel" className="haenel" />
-      </figure>
+      <img src={haenel} alt="Adèle Haenel" className="haenel" />
 
-
-      <p id="catchphrase" > Lieu de partage de films féministes </p>
     </section>
 
-    <section id="intro">
-      <div id="intro">
+    <section className="intro">
+      <div className="introdiv">
         <h1>Pourquoi Ultraviolettes ?</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolorem voluptatibus corrupti,
         assumenda repellendus,
@@ -118,8 +115,8 @@ const Home = () => (
       </div>
     </section>
 
-    <section id="apercus">
-      <div id="apercus">
+    <section className="apercus">
+      <div className="apercusdiv">
         <figure className="apercu">Insert title</figure>
         <figure className="apercu">Insert title</figure>
         <figure className="apercu">Insert title</figure>
