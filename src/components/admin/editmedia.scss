@@ -1,6 +1,5 @@
-// @import "./reset";
-// @import "./variables";
-
+@import "../styles/reset";
+@import "../styles/variables";
 
 
 .main {
@@ -10,4 +9,13 @@
     padding-top: 120px;
     height: 95vh;
 
+}
+
+button {
+    width: 100px;
+    background: $colourLightGreen;
+}
+
+a {
+    font-family: Comfortaa
 }

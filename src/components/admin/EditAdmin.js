@@ -58,8 +58,10 @@ export default class EditMedia extends Component {
                         <option value="Serie">Série</option>
                         <option value="Documentaire">Documentaire</option>
                     </select>
-                    <input onClick={this.sendNewMedia} type="submit" value="Submit" />
+                    <input onClick={this.sendNewMedia} type="submit" value="Submit" className="button" />
                 </form>
+
+                <button><a href="/admin">Back to admin</a></button>
             </div >
 
 

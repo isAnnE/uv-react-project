@@ -7,10 +7,10 @@
 // export default class Contact extends Component {
 //     state = {
 //         // définition de valeurs de base pour les tests de dev ("mettre à chaîne vide une fois dev ok")
-//         full_name: "test user",
-//         email: "foo@bar.com",
-//         subject: "whatever",
-//         message: "foo bar, bar bar ! bar ? foo bar baz, baz foo bar !",
+//         full_name: "Mon username",
+//         email: "emailpardefault.com",
+//         subject: "Nom du film",
+//         message: "Ce film mérite d'être sur le site car ...",
 //     };
 
 //     handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
@@ -19,7 +19,7 @@
 //         e.preventDefault(); // classique : empêche l'event submit du formulaire de rafraîchir la page
 //         const { full_name, email, subject, message } = this.state; // destructuration de l'objet this.state
 //         try {
-//             await handler.post("/api/contact", {
+//             await handler.post("/api/submit", {
 //                 full_name,
 //                 email,
 //                 subject,
@@ -37,9 +37,9 @@
 //                 onChange={this.handleChange}
 //                 onSubmit={this.handleSubmit}
 //             >
-//                 <h1 className="title">Contact</h1>
+//                 <h1 className="title">Suggérer un film</h1>
 //                 <label htmlFor="full_name" className="label">
-//                     full name
+//                     Votre username :
 //         </label>
 //                 <input
 //                     name="full_name"
@@ -49,7 +49,7 @@
 //                     defaultValue={this.state.full_name}
 //                 />
 //                 <label htmlFor="email" className="label">
-//                     email
+//                     Indiquez votre email :
 //         </label>
 //                 <input
 //                     name="email"
@@ -57,24 +57,24 @@
 //                     className="input"
 //                     defaultValue={this.state.email}
 //                 />
-//                 <label htmlFor="subject" className="label">
-//                     subject
+//                 <label htmlFor="filmname" className="label">
+//                     Nom du film / série / documentaire :
 //         </label>
 //                 <input
-//                     name="subject"
-//                     id="subject"
+//                     name="filmname"
+//                     id="filmname"
 //                     type="text"
 //                     className="input"
-//                     defaultValue={this.state.subject}
+//                     defaultValue={this.state.filmname}
 //                 />
-//                 <label htmlFor="message" className="label">
-//                     message
+//                 <label htmlFor="description" className="label">
+//                     Décrivez-nous pourquoi ce film mérite d'être sur Ultraviolettes :
 //         </label>
 //                 <textarea
-//                     name="message"
-//                     id="message"
+//                     name="description"
+//                     id="description"
 //                     className="input"
-//                     defaultValue={this.state.message}
+//                     defaultValue={this.state.description}
 //                 ></textarea>
 //                 <button className="btn">ok</button>
 //             </form>

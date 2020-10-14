@@ -16,7 +16,7 @@ export default class AdminMedia extends Component {
 
         this.setState({ medias: apiRes1.data });
 
-        console.log("series have been mounted captain !")
+        console.log("docus have been mounted captain !")
     };
 
 
@@ -29,16 +29,6 @@ export default class AdminMedia extends Component {
         this.setState({ medias: allMedia.data });
         console.log("hey gurl !!! you can delete series")
     };
-
-    // handleEdit = async (id) => {
-
-    //     await handler.editOne(id, "Documentaires");
-
-    //     const allMedia = await handler.getAll("Documentaire");
-
-    //     this.setState({ medias: allMedia.data });
-    //     console.log("editing function operational")
-    // };
 
     handleEdit = async (e) => {
         e.preventDefault(); // classique : empêche l'event submit du formulaire de rafraîchir la page
