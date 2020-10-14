@@ -47,12 +47,12 @@ export class APIHandler {
                 mediaType: type
             }
         }); // retourne une Promesse
-        // return axios.get("http://localhost:8888/api/products")
+        // ex. return axios.get("http://localhost:8888/api/media")
     }
 
     getById(id) {
         return this.instance.get("/" + id);
-        // return axios.get("http://localhost:8888/api/products/${id}")
+        // ex. return axios.get("http://localhost:8888/api/media/${id}")
     }
 
     postOne(data) {

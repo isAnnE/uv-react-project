@@ -1,20 +1,27 @@
 @import "../styles/reset";
 @import "../styles/variables";
 
-.admin {
-    overflow-x: scroll
+.adminmedia {
+    overflow-x: auto;
+    width: 100%;
+    // padding: 0 50px;
 }
 
 .ajmedia {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     max-width: 100px;
 }
 
 .addmedia {
     max-width: 100%;
     font-size: .9rem;
+}
+
+.mediatable {
+    overflow-x: auto;
+    width: 100%;
 }
 
 .table,
@@ -38,3 +45,9 @@
     padding: 7px;
     text-align: center;
 }
+
+// th,
+// td {
+//     display: flex;
+//     flex-direction: row;
+// }

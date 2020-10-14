@@ -66,8 +66,7 @@ export default class AdminMedia extends Component {
         console.log("c'est bon t'as tout")
 
         return (
-            <div className="docus">
-                <h1 className="title">Gérer les docus</h1>
+            <div className="adminmedia">
                 <table className="table">
                     <thead>
                         <tr>

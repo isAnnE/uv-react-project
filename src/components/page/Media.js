@@ -34,14 +34,14 @@ export default class mediaList extends Component {
                         <h3 key={i}>{`${media.name}`}</h3>
 
                         <ul className="infolist">
-                            <li key={i}>{`${media.year}`}</li>
-                            <li key={i}>{`${media.intro}`}</li>
-                            <li key={i}>{`${media.country}`}</li>
-                            <li key={i}>{`${media.genre}`}</li>
-                            <li key={i}>{`${media.directed_by}`}</li>
-                            <li key={i}>{`${media.written_by}`}</li>
-                            <li key={i}>{`${media.produced_by}`}</li>
-                            <li key={i}>{`${media.acting}`}</li>
+                            <li key={i}>Année de sortie: {`${media.year}`}</li>
+                            <li key={i}>Résumé: {`${media.intro}`}</li>
+                            <li key={i}>Pays d'origine: {`${media.country}`}</li>
+                            <li key={i}>Genre: {`${media.genre}`}</li>
+                            <li key={i}>Réalisation: {`${media.directed_by}`}</li>
+                            <li key={i}>Scenario: {`${media.written_by}`}</li>
+                            <li key={i}>Production: {`${media.produced_by}`}</li>
+                            <li key={i}>Acteur.ice.s: {`${media.acting}`}</li>
                         </ul>
 
                         <div className="img" key={i}>{`${media.photo}`}</div>

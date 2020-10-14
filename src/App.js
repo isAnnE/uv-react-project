@@ -135,7 +135,7 @@ const Home = () => (
           </figure>
         </a>
 
-        <a href="/series">
+        <a href="/documentaires">
           <figure className="apercu">
             <img src={docuov} alt="Tu enfanteras dans la douleur" className="apercuimg" />
             <figcaption className="caption">Documentaires</figcaption>

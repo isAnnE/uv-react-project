@@ -2,6 +2,11 @@
 @import "../styles/variables";
 
 
+.adminuser {
+    overflow-x: auto;
+    width: 100%;
+}
+
 .table {
     max-width: 100%;
     font-size: .9rem;

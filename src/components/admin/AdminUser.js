@@ -37,8 +37,7 @@ export default class AdminUsers extends Component {
         const {
             users
         } = this.state;
-        return (<div className="userboard" >
-            <h1 className="title" > Supprimer un user </h1>
+        return (<div className="adminuser" >
             <table className="table" >
                 <thead >
                     <tr >
@@ -56,10 +55,10 @@ export default class AdminUsers extends Component {
                         <td className="cell id" >
                             {user._id}
                         </td>
-                        <td className="cell" > {users.first_name} </td>
-                        <td className="cell"> {user.username_name} </td>
-                        <td className="cell"> {user.last_name} </td>
-                        <td className="cell" > {user.email} </td>
+                        <td className="cell">{users.first_name}</td>
+                        <td className="cell">{user.username_name}</td>
+                        <td className="cell">{user.last_name}</td>
+                        <td className="cell">{user.email}</td>
                         {/* <td className="cell" > {user.is_admin} </td> */}
                         <td className="cell" >
                             <button onClick={() => this.handleDelete(user._id)}> x </button>
