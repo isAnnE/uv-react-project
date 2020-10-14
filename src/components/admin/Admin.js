@@ -12,7 +12,7 @@ export default function Admin() {
     return (<div className="admin" >
         < h1 > Bienvenue sur la base admin! </h1>
         < p > Ici tu peux gérer notre médiathèque: éditer des fiches
-        media(film, série, documentaire) et si nécessaire, supprimer un ou une user qui ne respecte
+        media (film, série, documentaire) et si nécessaire, supprimer un ou une user qui ne respecte
         pas les valeurs de bienveillance du site. </p>
         <img src={
             videostore

@@ -11,6 +11,7 @@ export default function Footer() {
                 <section id="footerdata">
                     <p><a href="mentions">Mentions Légales</a></p>
                     <p><a href="contact">Contact</a></p>
+                    <p>Ultraviolettes @ 2020</p>
                 </section>
 
                 <div id="logos">

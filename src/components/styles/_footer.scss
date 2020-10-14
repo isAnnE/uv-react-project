@@ -14,27 +14,27 @@ footer {
         width: 50%;
         padding: 10px;
 
-        .p {
-            font-family: 'Muli';
-        }
-
-
-        &p:last-child {
-            padding-top: 8px
-        }
-
-        a {
+        p {
             font-size: 14px;
             min-width: 150px;
-            display: inline-block;
+            // display: inline-block;
             padding: 5px 15px;
-            text-decoration: none;
-            color: black;
 
-            &:hover {
-                color: $colourPurple;
-                font-size: bold
+            &p:last-child {
+                padding-top: 8px
             }
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    color: $colourPurple;
+                    font-size: bold
+                }
+            }
+
+
         }
     }
 
@@ -51,7 +51,7 @@ footer {
         a>img.logo {
             width: 30px;
             height: 30px;
-            margin: 15px 7px;
+            margin: 28px 7px;
         }
     }
 }

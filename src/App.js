@@ -111,10 +111,10 @@ const Home = () => (
     <section className="intro">
       <div className="introdiv">
         <h1>Pourquoi Ultraviolettes ?</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolorem voluptatibus corrupti,
-        assumenda repellendus,
-        numquam quasi officiis, officia laborum modi unde! Doloremque dolorem esse numquam quos earum quod vero
-            molestias?</p>
+        <p>Parce que si vous aussi vous aimeriez voir des films, séries et documentaires avec des personnages féminins qui passent le test de Bechdel, alors bienvenue !</p>
+        <p>Si en revanche vous voulez connaître davantage de films, séries et documentaire faits par des femmes, bienvenue aussi !</p>
+        <p>Vous vous en doutez, le projet de Ultraviolettes est de regrouper et faire connaître un maximum d'oeuvres cinématographiques qui répondent à au moins un de ces deux objectifs.</p>
+        <p>Et si vous avez des suggestions de films à nous faire, n'hésitez-pas à vous <a href="/signin">inscrire</a> pour accéder au formulaire de suggestions.</p>
       </div>
     </section>
 

@@ -13,10 +13,8 @@
         color: $colourDarkBlue;
     }
 
-    .email {
-        text-decoration: none;
-        color: $colourPurple;
-        font-size: bold;
+    .h3 {
+        padding: 25px
     }
 
     p {
@@ -24,12 +22,26 @@
         text-justify: initial;
         line-height: 25px;
         width: 50%;
-        text-align: justify;
+        text-align: center;
+    }
+
+    span {
+        text-decoration: underline;
     }
 
     .pic {
         padding: 50px 0;
         max-width: 400px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: $colourPurple;
+            font-size: bold
+        }
     }
 
 }

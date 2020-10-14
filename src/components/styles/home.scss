@@ -47,7 +47,7 @@ section#slide {
 // 2 - INTRO
 
 .intro {
-    min-height: 300px;
+    min-height: 350px;
     background: $colourPurple;
     display: flex;
     justify-content: center;
@@ -60,12 +60,28 @@ section#slide {
         background: white;
         padding: 35px;
 
+        h1 {
+            padding: 10px 0;
+            color: $colourDarkBlue;
+        }
+
         p {
             padding-top: 10px;
-            font-family: 'Open Sans', sans-serif;
+            text-align: justify;
         }
-    }
 
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+
+            &:hover {
+                color: $colourPurple;
+                font-size: bold
+            }
+        }
+
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -159,94 +175,3 @@ section#slide {
 
 
 }
-
-// // 1 - SLIDE
-
-// section#slide {
-//     height: auto;
-//     max-width: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-wrap: wrap;
-//     // margin-top: 100px;
-
-//     img.haenel {
-//         height: auto;
-//         max-width: 100%;
-//         z-index: 0
-//     }
-
-//     p#catchphrase {
-//         max-height: 100px;
-//         width: 100%;
-//         z-index: 1;
-//         width: 200px;
-//         height: 75px;
-//         background: white;
-//         text-align: center;
-//         padding: 15px 0;
-//     }
-// }
-
-// // FIN DU SLIDE
-
-
-// // 2 - INTRO
-
-// section#intro {
-//     min-height: 400px;
-//     background: $colourPurple;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-//     div#intro {
-//         width: 90%;
-//         min-height: 250px;
-//         background: white;
-//         padding: 35px 35px;
-
-//         p {
-//             padding-top: 10px;
-//             font-family: 'Open Sans', sans-serif;
-//         }
-//     }
-// }
-
-// // FIN INTRO
-
-
-
-// // 3 - APERCUS 
-
-
-// section#apercus {
-//     height: 450px;
-//     background: white;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     padding-top: 100px;
-
-
-//     div#apercus {
-//         width: 75%;
-//         height: 75%;
-//         display: grid;
-//         grid-template-columns: 200px 200px 200px;
-//         grid-template-rows: 200px 200px 200px;
-//         justify-content: center;
-
-
-//         /* grid-template-columns: 33% 33% 33%; */
-//         /* grid-template-rows: 33% 33% 33%; */
-//         figure {
-//             background: lightblue;
-//             margin: 10px 10px;
-//             /* width: 150px;
-//           height: 150px */
-
-//         }
-//     }
-// }
