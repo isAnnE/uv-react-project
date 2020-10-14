@@ -35,7 +35,6 @@ export default class AdminMedia extends Component {
         return (
             <div className="ajmedia">
 
-
                 <form onChange={this.handleChange} className="addmedia">
                     <label>Name:<input type="text" name="name" /></label>
                     <label>Year:<input type="number" name="year" /></label>
@@ -53,7 +52,7 @@ export default class AdminMedia extends Component {
                         <option value="Serie">Série</option>
                         <option value="Documentaire">Documentaire</option>
                     </select>
-                    <input onClick={this.sendNewMedia} type="submit" value="Submit" />
+                    <input onClick={this.sendNewMedia} type="submit" value="Submit" className="buttonsubmit" />
                 </form>
             </div >
 

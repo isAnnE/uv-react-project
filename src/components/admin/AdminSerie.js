@@ -36,7 +36,7 @@ export default class AdminMedia extends Component {
         console.log("c'est bon t'as tout")
 
         return (
-            <div className="adminmedia">
+            <div className="mediatable">
                 <table className="table">
                     <thead>
                         <tr>

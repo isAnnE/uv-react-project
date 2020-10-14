@@ -1,24 +1,24 @@
 @import "../styles/reset";
 @import "../styles/variables";
 
-// .allmedia {
-//     // overflow-x: visible;
-//     left: 0;
-// }
-
 .admin {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
     // padding-top: 120px;
     height: 100%;
     max-width: 100vw;
     padding: 120px 0;
 
+    // new
+    .allmedia {
+        @include flexCenter(column);
+    }
 
     h1 {
-        padding: 25px 10px;
+        padding: 100px 10px 25px 10px;
         color: $colourDarkBlue;
         width: 50%;
     }

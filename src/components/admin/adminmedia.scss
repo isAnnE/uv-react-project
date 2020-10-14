@@ -1,16 +1,11 @@
 @import "../styles/reset";
 @import "../styles/variables";
 
-.adminmedia {
-    overflow-x: auto;
-    width: 100%;
-    // padding: 0 50px;
-}
 
 .ajmedia {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 100px;
 }
 
@@ -23,6 +18,24 @@
     overflow-x: auto;
     width: 100%;
 }
+
+// .ajmedia {
+
+//     width: 150px;
+// }
+
+// .mediatable {
+//     overflow-x: auto;
+//     width: 100%;
+//     // max-width: 100%;
+//     // font-size: .9rem;
+// }
+
+
+// .addmedia {
+//     max-width: 100%;
+//     font-size: .9rem;
+// }
 
 .table,
 .table .cell {
@@ -46,8 +59,16 @@
     text-align: center;
 }
 
-// th,
-// td {
-//     display: flex;
-//     flex-direction: row;
-// }
+label {
+    margin: 5px
+}
+
+input {
+    margin: 5px
+}
+
+.buttonsubmit {
+    width: 100px;
+    background: $colourLightGreen;
+    font-family: Comfortaa;
+}
