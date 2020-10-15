@@ -99,7 +99,7 @@ export default class Signup extends Component {
                     defaultValue={this.state.password}
                     autoComplete="current-password"
                 />
-                {/* <label htmlFor="avatar" className="label">
+                <label htmlFor="avatar" className="label">
                     <FontAwesomeIcon icon={faUser} />
                 </label>
                 <input
@@ -108,7 +108,7 @@ export default class Signup extends Component {
                     type="file"
                     className="is-hidden"
                     ref={this.fileInput} // la référence créé dans la classe est associée à cet input file
-                /> */}
+                />
                 <button className="btn">ok</button>
                 <hr />
                 <p>

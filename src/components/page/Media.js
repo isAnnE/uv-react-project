@@ -44,7 +44,7 @@ export default class mediaList extends Component {
                             <li key={i}>Acteur.ice.s: {`${media.acting}`}</li>
                         </ul>
 
-                        <div className="img" key={i}>{`${media.photo}`}</div>
+                        <div className="img" key={i}>{`${media.photo.url}`}</div>
 
                     </div>
                 ))}

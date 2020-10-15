@@ -32,9 +32,9 @@ const Ul = styled.ul`
 
 .dashboardbuttons {padding-right: 30px}
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     flex-flow: column nowrap;
-    background-color: #0D2538;
+    background-color: #003366;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
@@ -70,6 +70,13 @@ export default function RightNav({ open }) {
       <li><a className="button" href="/films">Films</a></li>
       <li><a className="button" href="/series">Séries</a></li>
       <li><a className="button" href="/documentaires">Documentaires</a></li>
+      <li> {AuthContextValue.isSignedIn && (
+        <>
+          <a className="button" href="/dashboard">Mes infos</a>
+        </>
+      )}</li>
+
+
       <div className="dashboardbuttons">
         {'\u00A0'}
         <ButtonDashboard />

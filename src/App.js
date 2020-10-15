@@ -28,7 +28,6 @@ import Mentions from "./components/page/Mentions";
 import NotFound from "./components/page/NotFound";
 import Admin from "./components/admin/Admin";
 import EditAdmin from "./components/admin/EditAdmin";
-// import Login from "./components/page/Login";
 import SignIn from "./components/page/SignIn";
 import SignUp from "./components/page/SignUp";
 import Submit from "./components/page/Submit";
@@ -76,6 +75,8 @@ function App() {
                 <Media {...props} mediaType="Documentaire" />
               )}
             />
+
+
 
 
             <Route path="/contact" component={Contact} />

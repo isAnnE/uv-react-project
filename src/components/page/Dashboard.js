@@ -19,7 +19,7 @@ export default function Dashboard() {
 
                 <UserInfos context={AuthContextValue} />
                 {Boolean(AuthContextValue.currentUser.role === "admin") && (
-                    <div><button><a>Vers base admin</a></button></div>
+                    <div><button><a href="/admin">Vers base admin</a></button></div>
                 )}
             </div>
         )

@@ -26,7 +26,7 @@ export default class AdminUsers extends Component {
 
     handleDelete = async (id) => {
         await handler.deleteOne(id);
-        const apiRes2 = await handler.getById();
+        const apiRes2 = await handler.getAll();
         this.setState({
             products: apiRes2.data
         });

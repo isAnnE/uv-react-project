@@ -22,10 +22,11 @@ export default class AdminMedia extends Component {
 
 
     handleDelete = async (id) => {
+        // return console.log(id)
+        await handler.deleteOne(id);
 
-        await handler.deleteOne(id, "Films");
 
-        const allMedia = await handler.getById("Film");
+        const allMedia = await handler.getAll("Film");
 
         this.setState({ medias: allMedia.data });
         console.log("hey gurl !!! you can delete all media")

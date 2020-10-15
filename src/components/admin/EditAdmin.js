@@ -49,6 +49,7 @@ export default class EditMedia extends Component {
                     <label>Country:<input value={this.state.country} type="text" name="country" /></label>
                     <label>Genre:<input value={this.state.genre} type="text" name="genre" /></label>
                     <label>Extract:<input value={this.state.extract} type="text" name="extract" /></label>
+                    <label>Photo:<input value={this.state.photo} type="text" name="photo" /></label>
                     <label>Directed by:<input value={this.state.directed_by} type="text" name="directed_by" /></label>
                     <label>Written by:<input value={this.state.written_by} type="text" name="written_by" /></label>
                     <label>Produced by:<input value={this.state.produced_by} type="text" name="produced_by" /></label>
