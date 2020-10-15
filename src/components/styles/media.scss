@@ -40,8 +40,13 @@
         color: white;
     }
 
+    li {
+        padding: 3px 0
+    }
+
     h3 {
-        color: white
+        color: white;
+        padding-bottom: 3px;
     }
 
     .img {
@@ -57,5 +62,29 @@
         line-height: 20px;
         color: black;
         font-size: 15px
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .buttonlink {
+        width: 100px;
+        height: 50px;
+        background: white;
+        border: white;
+        border-radius: 5px;
+    }
+
+    .video {
+        color: $colourDarkBlue;
+        font-weight: bold;
+        font-family: 'Comfortaa', cursive;
+    }
+
+    a {
+        text-decoration: none;
     }
 }
