@@ -87,7 +87,7 @@ function App() {
             <Route path="/signup" component={SignUp} />
             <ProtectedRoute path="/submit" component={Submit} />
             <ProtectedRoute path="/dashboard" component={Dashboard} />
-            <ProtectedRoute path="/admin" component={Admin} />
+            <ProtectedRoute path="/adminishere" component={Admin} />
             <ProtectedRoute path="/editadmin/:id" component={EditAdmin} />
             <Route path="*" component={NotFound} />
             {/* not found doit être la dernière route */}
