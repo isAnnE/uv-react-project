@@ -56,6 +56,7 @@ export class APIHandler {
     }
 
     postOne(data) {
+        console.log("data ???", data)
         return this.instance.post("/", data);
     }
 

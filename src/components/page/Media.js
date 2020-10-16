@@ -3,6 +3,11 @@ import React, { Component } from "react";
 import { APIHandler } from "../api/handler";
 import '../styles/media.scss';
 
+// var cl = new cloudinary.Cloudinary({ cloud_name: "dol6lso5o", secure: true });
+
+// cloudinary.v2.uploader.upload("https://www.example.com/mysample.jpg",
+//     { public_id: "photo media" },
+//     function (error, result) { console.log(result); });
 
 const mediaHandler = new APIHandler("api/media");
 
@@ -28,21 +33,23 @@ export default class mediaList extends Component {
                 {medias.map((media, i) => (
                     <div className="mediatile">
 
-                        <h3 key={i}>{`${media.name}`}</h3>
+                        <div className="img" key={i}> {`${media.photo.url}`}</div>
 
-                        <ul className="infolist">
-                            {/* <li key={i}>Résumé: {`${media.intro}`}</li> */}
-                            <li key={i}>Réalisation: {`${media.directed_by}`}</li>
-                            <li key={i}>Scenario: {`${media.written_by}`}</li>
-                            <li key={i}>Acteur.ice.s: {`${media.acting}`}</li>
-                            {/* <li key={i}>Année de sortie: {`${media.year}`}</li> */}
-                            {/* <li key={i}>Pays d'origine: {`${media.country}`}</li> */}
-                            {/* <li key={i}>Genre: {`${media.genre}`}</li> */}
-                            {/* <li key={i}>Production: {`${media.produced_by}`}</li> */}
+                        <div className="infos">
+                            <h3 key={i}>{`${media.name}`}</h3>
+                            <ul className="infolist">
+                                {/* <li key={i}>Résumé: {`${media.intro}`}</li> */}
+                                <li key={i}>Réalisation: {`${media.directed_by}`}</li>
+                                <li key={i}>Scenario: {`${media.written_by}`}</li>
+                                <li key={i}>Acteur.ice.s: {`${media.acting}`}</li>
+                                {/* <li key={i}>Année de sortie: {`${media.year}`}</li> */}
+                                {/* <li key={i}>Pays d'origine: {`${media.country}`}</li> */}
+                                {/* <li key={i}>Genre: {`${media.genre}`}</li> */}
+                                {/* <li key={i}>Production: {`${media.produced_by}`}</li> */}
 
-                        </ul>
+                            </ul>
 
-                        {/* <div className="img" key={i}> {`${media.photo.url}`}</div> */}
+                        </div>
                         <div className="button">
                             <button className="buttonlink">
                                 <a href="" className="link">

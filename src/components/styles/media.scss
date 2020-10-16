@@ -14,9 +14,9 @@
 
 
     .mediatile {
-        padding: 20px;
-        width: 280px;
-        height: 280px;
+        // padding: 20px;
+        width: 310px;
+        height: 510px;
         border: 5px solid $colourDarkBlue;
         margin: 15px 30px 15px 30px;
         background: $colourDarkBlue;
@@ -86,5 +86,21 @@
 
     a {
         text-decoration: none;
+    }
+
+    .img {
+        height: 200px;
+        width: 300px;
+        background: $colourPurple;
+
+    }
+
+
+    .infos {
+        padding: 10px;
+        height: 200px;
+        width: 300px;
+        background: $colourDarkBlue;
+
     }
 }
