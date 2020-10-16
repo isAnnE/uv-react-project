@@ -88,11 +88,16 @@
         text-decoration: none;
     }
 
-    .img {
+    .imgcontainer {
         height: 200px;
         width: 300px;
         background: $colourPurple;
 
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
     }
 
 

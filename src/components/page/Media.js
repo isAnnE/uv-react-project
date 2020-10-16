@@ -33,17 +33,20 @@ export default class mediaList extends Component {
                 {medias.map((media, i) => (
                     <div className="mediatile">
 
-                        <div className="img" key={i}> {`${media.photo.url}`}</div>
+                        {/* <img className="img" key={i}> {`${media.photo}`}</img> */}
+                        <div className="imgcontainer">
+                            <img className="img" alt="photo media" key={i} src={media.photo}></img>
+                        </div>
 
                         <div className="infos">
                             <h3 key={i}>{`${media.name}`}</h3>
                             <ul className="infolist">
                                 {/* <li key={i}>Résumé: {`${media.intro}`}</li> */}
-                                <li key={i}>Réalisation: {`${media.directed_by}`}</li>
-                                <li key={i}>Scenario: {`${media.written_by}`}</li>
-                                <li key={i}>Acteur.ice.s: {`${media.acting}`}</li>
-                                {/* <li key={i}>Année de sortie: {`${media.year}`}</li> */}
-                                {/* <li key={i}>Pays d'origine: {`${media.country}`}</li> */}
+                                <li key={i}>Réalisation : {`${media.directed_by}`}</li>
+                                <li key={i}>Scenario : {`${media.written_by}`}</li>
+                                <li key={i}>Acteur.ice.s : {`${media.acting}`}</li>
+                                <li key={i}>Année de sortie : {`${media.year}`}</li>
+                                <li key={i}>Pays : {`${media.country}`}</li>
                                 {/* <li key={i}>Genre: {`${media.genre}`}</li> */}
                                 {/* <li key={i}>Production: {`${media.produced_by}`}</li> */}
 
@@ -52,7 +55,7 @@ export default class mediaList extends Component {
                         </div>
                         <div className="button">
                             <button className="buttonlink">
-                                <a href="" className="link">
+                                <a href={media.extract} className="link" target="_blank">
                                     <p className="video">Visionner un extrait</p>
                                 </a>
                             </button>

@@ -18,8 +18,8 @@ export default function Dashboard() {
                 <p>Ici pouvez modifier vos coordonnées personnelles et soumettre une idée de film, série ou documentaire qui vous paraît avoir sa place sur le site</p>
 
                 <UserInfos context={AuthContextValue} />
-                {Boolean(AuthContextValue.currentUser.role === "admin") && (
-                    <div><button><a href="/admin">Vers base admin</a></button></div>
+                {Boolean(AuthContextValue.currentUser.is_admin === "true") && (
+                    <div className="adminaccess"><button><a href="/admin">Vers base admin</a></button></div>
                 )}
             </div>
         )
