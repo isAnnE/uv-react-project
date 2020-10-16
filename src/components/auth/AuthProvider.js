@@ -64,7 +64,7 @@ export default class AuthProvider extends Component {
     deleteLocalAuthToken = () => window.localStorage.removeItem(tokenName);
 
 
-    isAdmin = () => this.state.currentUser && this.state.currentUser === "admin";
+    isAdmin = () => this.state.currentUser && this.state.currentUser.is_admin === true;
 
     /**
      * Met à jour l'user courant dans le Contexte
