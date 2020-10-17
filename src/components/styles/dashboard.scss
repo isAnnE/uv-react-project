@@ -1,17 +1,38 @@
+@import "./reset";
+@import "./variables";
+
+
+
 .dash {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 220px;
-    // height: 95vh;
+    padding: 120px 0;
+    height: auto;
 
     p {
         padding: 15px 0;
         max-width: 70%
     }
 
-    .dashboardaccess {
-        width: 150px;
-        height: 50px
+
+    .adminaccess {
+        margin-top: 50px;
+        @include flexCenter(column);
     }
+
+
+    .adminbtn {
+        margin: 20px 0;
+        padding: 5px 10px;
+    }
+
+    a {
+        font-family: 'Comfortaa', cursive;
+        color: $colourDarkBlue;
+        font-weight: bold;
+        text-decoration: none;
+
+    }
+
 }

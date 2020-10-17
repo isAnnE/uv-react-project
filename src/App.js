@@ -32,7 +32,7 @@ import SignIn from "./components/page/SignIn";
 import SignUp from "./components/page/SignUp";
 import Submit from "./components/page/Submit";
 import Dashboard from "./components/page/Dashboard";
-import Test from "./components/page/Test";
+
 
 
 
@@ -58,7 +58,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/test" component={Test} />
+
             <Route
               path='/films'
               render={(props) => (

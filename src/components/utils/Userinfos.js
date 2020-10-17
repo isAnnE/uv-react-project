@@ -63,9 +63,12 @@ export default class UserInfos extends Component {
                         type="text"
                         name="email"
                         defaultValue={this.props.context.currentUser.email} />
-                    <button className="btn" > update infos </button>
+                    <button className="btn" > Mettre mes infos à jour </button>
+
+
+                    <button className="filmform"><a href="/submit">Suggérer un film</a></button>
                 </form>
-                <button className="filmform"><a href="/submit">Suggérer un film</a></button>
+
             </div>
         );
     }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AuthContext from "../auth/AuthContext";
 import { Link } from "react-router-dom";
-// import "./../styles/mod.form.css";
+import ".././styles/signup.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
@@ -50,10 +50,10 @@ export default class Signup extends Component {
             <form
                 onChange={this.handleInput}
                 onSubmit={this.handleSubmit}
-                className="form"
+                className="form-signup"
             >
                 <h1 className="title">Inscription</h1>
-                <p>Vous avez des idées de films, séries ou documentaires qui ont leur place sur le site ?
+                <p className="introsignup">Vous avez des idées de films, séries ou documentaires qui ont leur place sur le site ?
                     Inscrivez-vous pour pouvoir nous les proposer.</p>
                 <label htmlFor="first_name" className="label">
                     first name
@@ -109,12 +109,12 @@ export default class Signup extends Component {
                     className="is-hidden"
                     ref={this.fileInput} // la référence créé dans la classe est associée à cet input file
                 />
-                <button className="btn">ok</button>
+                <button className="btn">OK</button>
                 <hr />
-                <p>
-                    Already have an account ? please{" "}
+                <p className="ifhasaccount">
+                    Vous avez déjà un compte ?{" "}
                     <Link className="link" to="/signin">
-                        sign in
+                        Connectez-vous
           </Link>
           .
         </p>

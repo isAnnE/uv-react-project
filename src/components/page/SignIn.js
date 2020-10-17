@@ -27,7 +27,7 @@ export default class Signin extends Component {
             <form
                 onChange={this.handleInput}
                 onSubmit={this.handleSubmit}
-                className="form"
+                className="signin-form"
             >
                 <h1 className="title">Connection</h1>
 
@@ -43,7 +43,7 @@ export default class Signin extends Component {
                     autoComplete="email"
                 />
                 <label htmlFor="password" className="label">
-                    password
+                    Mot de passe
         </label>
                 <input
                     id="password"
@@ -53,9 +53,9 @@ export default class Signin extends Component {
                     defaultValue={this.state.password}
                     autoComplete="current-password"
                 />
-                <button className="btn">ok</button>
+                <button className="btn">OK</button>
                 <hr />
-                <p>
+                <p className="signin-p">
                     Si vous n'avez pas encore de compte, c'est par{" "}
                     <Link className="link" to="/signup">
                         ici !

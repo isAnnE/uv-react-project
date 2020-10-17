@@ -1,0 +1,49 @@
+@import "./reset";
+@import "./variables";
+
+
+
+.form-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0 30px 0;
+    // height: 130vh;
+}
+
+.title {
+    padding: 25px 0;
+    color: $colourDarkBlue;
+}
+
+.btn {
+    // font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+    color: $colourDarkBlue;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 20px;
+}
+
+.introsignup {
+    margin-bottom: 30px;
+    padding: 30px 0;
+    max-width: 60%;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+
+
+    &:hover {
+        color: $colourPurple;
+        font-size: bold
+    }
+}
+
+.ifhasaccount {
+    padding: 20px 0 40px 0;
+}

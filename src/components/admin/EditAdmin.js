@@ -62,7 +62,7 @@ export default class EditMedia extends Component {
                     <input onClick={this.sendNewMedia} type="submit" value="Submit" className="button" />
                 </form>
 
-                <button><a href="/admin">Back to admin</a></button>
+                <button><a href="/adminishere">Back to admin</a></button>
             </div >
 
 
