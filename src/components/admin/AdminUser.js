@@ -18,19 +18,17 @@ export default class AdminUsers extends Component {
         this.setState({
             users: apiRes.data
         });
-        console.log("hey gurl !!! you just did something")
+        console.log("users récupérés")
     }
-
-
 
 
     handleDelete = async (id) => {
         await handler.deleteOne(id);
         const apiRes2 = await handler.getAll();
         this.setState({
-            products: apiRes2.data
+            users: apiRes2.data
         });
-        console.log("hey gurl !!! you just deleted a nasty troll")
+        console.log("you just deleted a nasty troll")
     };
 
     render() {
@@ -46,10 +44,10 @@ export default class AdminUsers extends Component {
                         <th className="cell" > Username </th>
                         <th className="cell" > Lastname </th>
                         <th className="cell" > Email </th>
-                        {/* <th className="cell" > Admin </th> */}
                         <th className="cell" > delete </th>
                     </tr >
                 </thead>
+                {/* on map les users pour aller chercher le data correspondant et créer un nouveau tableau */}
                 <tbody > {users.map((user, i) => (
                     <tr key={i}>
                         <td className="cell id" >
@@ -59,7 +57,6 @@ export default class AdminUsers extends Component {
                         <td className="cell">{user.username_name}</td>
                         <td className="cell">{user.last_name}</td>
                         <td className="cell">{user.email}</td>
-                        {/* <td className="cell" > {user.is_admin} </td> */}
                         <td className="cell" >
                             <button onClick={() => this.handleDelete(user._id)}> x </button>
                         </td >

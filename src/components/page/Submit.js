@@ -1,7 +1,7 @@
 import React, {
     Component
 } from "react";
-// import "./../styles/mod.form.css";
+import "../styles/submit.scss"
 
 import {
     APIHandler
@@ -42,13 +42,13 @@ export default class Submit extends Component {
     render() {
         return (
             <form
-                className="form"
+                className="submitform"
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
             >
-                <h1 className="title">Contact</h1>
+                <h1 className="title">Proposer un film, série, ou documentaire</h1>
                 <label htmlFor="full_name" className="label">
-                    full name
+                    Mon nom
         </label>
                 <input
                     name="full_name"
@@ -58,7 +58,7 @@ export default class Submit extends Component {
                     defaultValue={this.state.full_name}
                 />
                 <label htmlFor="email" className="label">
-                    email
+                    Mon mail
         </label>
                 <input
                     name="email"
@@ -67,7 +67,7 @@ export default class Submit extends Component {
                     defaultValue={this.state.email}
                 />
                 <label htmlFor="subject" className="label">
-                    subject
+                    Nom du film
         </label>
                 <input
                     name="subject"
@@ -77,7 +77,7 @@ export default class Submit extends Component {
                     defaultValue={this.state.subject}
                 />
                 <label htmlFor="message" className="label">
-                    message
+                    Description
         </label>
                 <textarea
                     name="message"
@@ -85,7 +85,7 @@ export default class Submit extends Component {
                     className="input"
                     defaultValue={this.state.message}
                 ></textarea>
-                <button className="btn">ok</button>
+                <button className="btn">OK</button>
             </form>
         );
     }

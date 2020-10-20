@@ -18,17 +18,16 @@ export default class EditMedia extends Component {
     async componentDidMount() {
         const media = await handler.getById(this.props.match.params.id);
         this.setState(media.data);
-
-        console.log("media for editing is here")
+        console.log("media for editing are here")
     };
 
     handleChange = (event) => {
-
         this.setState({ [event.target.name]: event.target.value })
 
     };
 
     sendNewMedia = async (event) => {
+        // empêche page de se rafraîchir tout de suite
         event.preventDefault();
         await handler.patchOne(this.props.match.params.id, this.state);
 
@@ -36,8 +35,6 @@ export default class EditMedia extends Component {
     }
 
     render() {
-        // const { medias } = this.state;
-        // console.log("c'est bon t'as tout")
 
         return (
             <div className="main">

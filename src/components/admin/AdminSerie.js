@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { APIHandler } from "../api/handler";
 import "./adminmedia.scss";
 
-const handler = new APIHandler("api/media");
+// version commentée : adminfilm
 
+const handler = new APIHandler("api/media");
 
 export default class AdminMedia extends Component {
     state = {

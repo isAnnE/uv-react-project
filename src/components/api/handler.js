@@ -42,11 +42,13 @@ export class APIHandler {
     }
 
     getAll(type) {
+        console.log("handler get ok")
         return this.instance.get("/", {
             params: {
                 mediaType: type
             }
-        }); // retourne une Promesse
+        });
+        // retourne une Promesse
         // ex. return axios.get("http://localhost:8888/api/media")
     }
 

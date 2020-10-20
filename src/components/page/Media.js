@@ -55,7 +55,7 @@ export default class mediaList extends Component {
                         </div>
                         <div className="button">
                             <button className="buttonlink">
-                                <a href={media.extract} className="link" target="_blank">
+                                <a href={media.extract} className="link" target="_blank" rel="noopener noreferrer">
                                     <p className="video">Visionner un extrait</p>
                                 </a>
                             </button>

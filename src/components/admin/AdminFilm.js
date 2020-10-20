@@ -3,38 +3,44 @@ import { Link } from 'react-router-dom';
 import { APIHandler } from "../api/handler";
 import "./adminmedia.scss";
 
+// on va chercher notre handler, on lui donne le model adéquat, impératif de mettre "new"
 const handler = new APIHandler("api/media");
 
 
 export default class AdminMedia extends Component {
     state = {
+        // array medias vide
         medias: [],
     };
 
-    async componentDidMount() {
-        const apiRes1 = await handler.getAll("Film");
+    // https://javascript.info/async-await
+    // async ensures that the function returns a promise, and wraps non-promises in it.
+    // The keyword await makes JavaScript wait until that promise settles and returns its result.
 
+    async componentDidMount() {
+        // on le remplit avec tous les medias qui correspondent à l'enum "Film"
+        const apiRes1 = await handler.getAll("Film");
+        // on attend les infos du handler avant de set le state à nouveau
         this.setState({ medias: apiRes1.data });
 
         console.log("films have been mounted captain !")
     };
 
 
-
+    // déclenché avec bouton delete
     handleDelete = async (id) => {
-        // return console.log(id)
+        // on supprimer un media grâce à son id
         await handler.deleteOne(id);
-
-
+        // puis on recharge tous les films
         const allMedia = await handler.getAll("Film");
-
+        // on rafraîchit le state 
         this.setState({ medias: allMedia.data });
         console.log("hey gurl !!! you can delete all media")
     };
 
     render() {
         const { medias } = this.state;
-        console.log("c'est bon t'as tout")
+        console.log("State actuel chargé")
 
         return (
 
@@ -74,6 +80,7 @@ export default class AdminMedia extends Component {
                                 <td className="cell">{media.acting}</td>
                                 <td className="cell">{media.media_type}</td>
                                 <td className="cell">
+                                    {/* Si on n'a pas accès à admin (not an admin) on n'a pas non plus accès à editadmin */}
                                     <Link to={"/editadmin/" + media._id}><button> Edit media </button></Link>
                                 </td>
                                 <td className="cell">

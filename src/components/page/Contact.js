@@ -1,7 +1,7 @@
 import React, {
     Component
 } from "react";
-// import "./../styles/mod.form.css";
+import "../styles/contact.scss"
 
 import {
     APIHandler
@@ -42,7 +42,7 @@ export default class Contact extends Component {
     render() {
         return (
             <form
-                className="form"
+                className="contactform"
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
             >

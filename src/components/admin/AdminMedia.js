@@ -11,16 +11,20 @@ const handler = new APIHandler("api/media");
 
 
 export default class AdminMedia extends Component {
+    // on set le state
     state = {
+        // default type
         media_type: "Film"
     };
 
+    // quand il y a une nouvelle entrée, la valeur est prise en compte
     handleChange = (event) => {
 
         this.setState({ [event.target.name]: event.target.value })
 
     };
 
+    // puis postée en bdd lorsque le bouton submit est cliqué
     sendNewMedia = async (event) => {
         event.preventDefault();
         await handler.postOne(this.state);
@@ -29,8 +33,6 @@ export default class AdminMedia extends Component {
     }
 
     render() {
-        // const { medias } = this.state;
-        // console.log("c'est bon t'as tout")
 
         return (
             <div className="ajmedia">

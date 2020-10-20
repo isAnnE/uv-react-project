@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { APIHandler } from "../api/handler";
 import "./adminmedia.scss";
 
+// version commentée : adminfilm
+
 const handler = new APIHandler("api/media");
 
 
@@ -27,7 +29,7 @@ export default class AdminMedia extends Component {
         const allMedia = await handler.getAll("Documentaire");
 
         this.setState({ medias: allMedia.data });
-        console.log("hey gurl !!! you can delete series")
+        console.log("hey gurl !!! you can delete documentaries")
     };
 
     handleEdit = async (e) => {

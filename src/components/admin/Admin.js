@@ -19,7 +19,6 @@ export default function Admin() {
         }
             className="videostore"
             alt="video store" />
-        {/* <div className="allmedia"> */}
         <h1 className="title">Ajouter un média</h1>
         <AdminMedia />
         <h1 className="title">Gérer les fiches films</h1>
@@ -30,7 +29,6 @@ export default function Admin() {
         <AdminDocumentaire />
         <h1 className="title">Gérer les users</h1>
         <AdminUser />
-        {/* </div> */}
     </div>
     );
 }
