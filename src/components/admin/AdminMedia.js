@@ -44,7 +44,7 @@ export default class AdminMedia extends Component {
                     <label>Country:<input type="text" name="country" /></label>
                     <label>Genre:<input type="text" name="genre" /></label>
                     <label>Extract:<input type="text" name="extract" /></label>
-                    <label>Photo:<input type="text" name="photo.url" /></label>
+                    <label>Photo:<input type="text" name="photo" /></label>
                     <label>Directed by:<input type="text" name="directed_by" /></label>
                     <label>Written by:<input type="text" name="written_by" /></label>
                     <label>Produced by:<input type="text" name="produced_by" /></label>

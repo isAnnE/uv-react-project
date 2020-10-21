@@ -73,7 +73,7 @@ export default class AdminMedia extends Component {
                                 <td className="cell">{media.country}</td>
                                 <td className="cell">{media.genre}</td>
                                 <td className="cell">{media.extract}</td>
-                                <td className="cell">{media.photo.url}</td>
+                                <td className="cell">{media.photo}</td>
                                 <td className="cell">{media.directed_by}</td>
                                 <td className="cell">{media.written_by}</td>
                                 <td className="cell">{media.produced_by}</td>

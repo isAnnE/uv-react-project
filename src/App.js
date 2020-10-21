@@ -10,7 +10,7 @@ import './components/styles/home.scss'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import BrowserRouter as Router, { Link, NavLink, Switch, Route } from 'react-router-dom';
 import haenel from "./components/img/haenel.png";
-import lawrence from "./components/img/lawrenceanyways.jpg";
+import lawrence from "./components/img/lawrenceanywaysbis.png";
 import gilmore from "./components/img/ggirls.jpg";
 import docuov from "./components/img/docuovidie.jpg";
 
